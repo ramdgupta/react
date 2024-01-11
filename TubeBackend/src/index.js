@@ -1,6 +1,7 @@
+import express from "express";
 import dontenv from "dotenv";
 import connectDB from "./db/index.js";
-
+import { app } from "./app.js";
 dontenv.config({
     path:'./env'
 })
@@ -8,11 +9,13 @@ dontenv.config({
 connectDB()
 .then(
     app.listen(process.env.PORT||8000, ()=>{
-        console.log(`server is running at port: ${process.env.PORT}`);
-    })
+        console.log(`server is running at port new http://localhost:${process.env.PORT}`);
+    }),
+    
+    
 )
 .catch((err)=>{
-    console.log("MONGO db connection failed !!!", err);
+    console.log("MONGO db connection failed !!!", err)
 })
 
 // import express from "express";

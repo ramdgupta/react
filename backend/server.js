@@ -1,6 +1,7 @@
 import express from 'express';
 const app = express();
-const port = process.env.PORT || 5000;
+//const port = process.env.PORT || 5300;
+const port = 5300;
 const jokes = [
     {
       id: 1,
@@ -29,11 +30,15 @@ const jokes = [
     }
   ];
   
-  console.log(JSON.stringify(jokes, null, 2));
+//console.log(JSON.stringify(jokes, null, 2));
   
 
 app.get('/', (req, res) => {
     res.send("server start")
+});
+
+app.get('/home', (req, res) => {
+  res.send("server start home page")
 });
 app.get('/api/jokes', (req, res) => {
     res.send(jokes);
