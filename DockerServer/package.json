@@ -1,0 +1,21 @@
+{
+  "name": "dockerserver",
+  "version": "1.0.0",
+  "description": "Docker test",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "react"
+  },
+  "keywords": [
+    "docker"
+  ],
+  "author": "ram",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
