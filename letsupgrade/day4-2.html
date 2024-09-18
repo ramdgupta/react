@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 100px;
+            width: 200px;
+            display: block;
+            background:#ff0000;
+        }
+        p{
+            background: green;
+            padding: 10px;
+            font-size: 12px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-weight: 800;
+        }
+        .greet{
+            background-color: chartreuse;
+        }
+        button{
+            margin-top:10px;
+            width: 150px;
+        }
+        .hide{display: none;}
+    </style>
+</head>
+<body>
+    <button onclick="hideAllElement()">Hide All Div </button>
+    
+    <button onclick="printElement()">Log element </button>
+    <button onclick="printTextContent()">Log textContent </button>
+    <button onclick="printInnerHTML()">Log innerHTML </button>
+   <div id="parentDiv">
+    <div>
+        <p>Hello I am DOM Element of DOM Tree</p>
+    </div>
+    <div id="greet" class="greet">Hello every one</div>
+   
+   </div>
+   <script>
+        // maupulating any DOM element need first target the element
+        // first select the element 
+        const parentDiv = document.getElementById("parentDiv");
+        const greetDiv = document.getElementById("greet");
+       function printElement(){
+        console.log(greetDiv);
+       }
+       function printTextContent(){
+        greetDiv.textContent="Hi, I am updating textContent";
+       } 
+       function printInnerHTML(){
+        greetDiv.innerHTML ="<h1>I am updating innerHTML</h1>"
+       }
+       function hideAllElement() {
+            parentDiv.classList.toggle("hide")
+            console.log('abc');
+        }
+    </script>
+</body>
+</html>

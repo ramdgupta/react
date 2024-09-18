@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="printSomething()"> click</button>
+    <script>
+        // let movie= {
+        //     name : "Avenger Infinity war",
+        //     rating:8.7,
+        //     poster:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flipkart.com%2Fordershock-avengers-infinity-war-decorative-poster-18-cm-self-adhesive-sticker%2Fp%2Fitmd402054af40a6&psig=AOvVaw3rQZ5MCibABTiyIfXf75HC&ust=1726322991283000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNjDz7aMwIgDFQAAAAAdAAAAABAE",
+        //     description:"Avengers: Infinity War is a 2018 American superhero film based on the Marvel Comics superhero team the Avengers. In this film, the Avengers and their allies unite to battle the powerful villain Thanos, who seeks to collect all six Infinity Stones to unleash catastrophic destruction across the universe"
+        // }
+        // let movie1 = {
+        //     name:"RRR",
+        //     rating:9,
+        //     poster:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt8178634%2F&psig=AOvVaw0_NuuT4JqXkUwdWHj1aJ1h&ust=1726323124382000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCLjH64qNwIgDFQAAAAAdAAAAABAE",
+        //     description:""
+        // }
+        // let movies =[{
+        //     name : "Avenger Infinity war",
+        //     rating:8.7,
+        //     poster:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.flipkart.com%2Fordershock-avengers-infinity-war-decorative-poster-18-cm-self-adhesive-sticker%2Fp%2Fitmd402054af40a6&psig=AOvVaw3rQZ5MCibABTiyIfXf75HC&ust=1726322991283000&source=images&cd=vfe&opi=89978449&ved=0CBEQjRxqFwoTCNjDz7aMwIgDFQAAAAAdAAAAABAE",
+        //     description:"Avengers: Infinity War is a 2018 American superhero film based on the Marvel Comics superhero team the Avengers. In this film, the Avengers and their allies unite to battle the powerful villain Thanos, who seeks to collect all six Infinity Stones to unleash catastrophic destruction across the universe"
+        // },{
+        //     name:"RRR",
+        //     rating:9,
+        //     poster:"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.imdb.com%2Ftitle%2Ftt8178634%2F&psig=AOvVaw0_NuuT4JqXkUwdWHj1aJ1h&ust=1726323124382000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCLjH64qNwIgDFQAAAAAdAAAAABAE",
+        //     description:""
+        // }]
+        // for(let i =0; i<movies.length; i++){
+        //     console.log(movies[i]);
+        // }
+        // console.log(movies[0].name);
+        // for(let i=0; i<movies.length;i++){
+        //     console.log(movies[i].name);
+        // }
+
+        // functions 
+        // A function nothing but collection of code which may have a name which never call automaticaly
+        
+        //function definition
+        function doSomething() {
+            console.log("Hello function !")
+        }
+
+        // function calling
+        doSomething();  
+        console.log("something more");
+        doSomething();
+    // arrow function
+    dosome = () =>{
+        console.log("I am arrow function")
+    }
+    dosome();
+    // if your function is single line then no need to mention curly braces
+    // arrow function is syntatical sugar of function 
+    dosomesingleLine = () => console.log("I am single line arrow function");
+    dosomesingleLine();
+
+    // some time you also need to pass data from outside to inside of function 
+    // param only use in the function not the outside to the function
+    function profile(name, age){
+        console.log(name, " ", age);
+    }
+    profile("Shaurya", 9);
+    profile("Rahul", 19);
+    profile("Megha", 9);
+    // different between let and var
+    // boath are used to create variable in java script
+    // var is function scope and let is block scope
+    // let create a dummy function
+    // const also block scope
+    // understand with example
+    // function dummy(){
+    //     if(true){
+    //     {{{{{    var a =1;}}}}}
+    //         let b = 2;
+    //         const c =3;
+    //     }
+    //     console.log(a);
+    //     console.log(c);
+    //     console.log(b);
+    //     console.log(a);
+    // }
+    // dummy();
+
+    //DOM manipulation 
+    //event Handling
+    // an user click double clieck hover or perform any activity is called an event in js
+    //create click button let see how event work when we click on function
+// first we write a function it's print something
+// to call this function we need event listner 
+// it's have three part event , event handler (in this case button), event listern (is the task perform here function call printSomething) 
+// when function attached with event is called event listner function
+
+function printSomething(){
+    //event object is only avilable in a function which attached with an event
+    console.log(event);
+    console.log("I am click event");
+ }
+// non event listner function
+// event listner is not avilable in normal function
+ function nonevent (){
+    console.log('nonevent',event);
+ }
+ nonevent ()
+// what is acually dom manipulation
+
+    </script>
+</body>
+</html>
