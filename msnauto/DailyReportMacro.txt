@@ -1,0 +1,118 @@
+
+Sub CreateXLFile()
+
+Dim wb As Workbook
+Dim ws As Worksheet
+Dim fso As Object
+Dim folder As Object
+Dim file As Object
+Dim csvfile As Workbook
+Dim dt As Date
+
+Set wb = Workbooks.Add
+
+'dt = DateSerial(Year(Date), Month(Date), 1)
+ dt = Date
+
+'Create the Sheets
+ws1Name = "PartnerIngestion_" & Format(dt, "yyyymmdd")
+ws2Name = "PartnerAging_" & Format(dt, "yyyymmdd")
+ws3Name = "PartnerAttributes_" & Format(dt, "yyyymmdd")
+ws4Name = "PartnerRejections_" & Format(dt, "yyyymmdd")
+
+wb.Sheets.Add After:=ActiveSheet
+ActiveSheet.Name = ws1Name
+wb.Sheets.Add After:=ActiveSheet
+ActiveSheet.Name = ws2Name
+wb.Sheets.Add After:=ActiveSheet
+ActiveSheet.Name = ws3Name
+wb.Sheets.Add After:=ActiveSheet
+ActiveSheet.Name = ws4Name
+
+Set fso = CreateObject("Scripting.FileSystemObject")
+Set folder = fso.GetFolder("C:\Users\v-ramdulare\OneDrive - Microsoft\Documents\MarketPlaceReport\daily\Feb\09")
+
+For Each file In folder.Files
+    If Right(file.Name, 3) = "csv" Then
+        Select Case True
+            Case file.Name Like "*PartnerIngestion*.csv"
+                Set csvfile = Workbooks.Open(file.Path)
+                csvfile.Sheets(1).UsedRange.Copy
+                wb.Sheets(ws1Name).Range("A1").PasteSpecial Paste:=xlPasteValues
+                Application.DisplayAlerts = False
+                csvfile.Close False
+                Application.DisplayAlerts = True
+            Case file.Name Like "*PartnerAgingReport*.csv"
+                Set csvfile = Workbooks.Open(file.Path)
+                csvfile.Sheets(1).UsedRange.Copy
+                wb.Sheets(ws2Name).Range("A1").PasteSpecial Paste:=xlPasteValues
+                Application.DisplayAlerts = False
+                csvfile.Close False
+                Application.DisplayAlerts = True
+            Case file.Name Like "*AdListingReport*.csv"
+                Set csvfile = Workbooks.Open(file.Path)
+                csvfile.Sheets(1).UsedRange.Copy
+                wb.Sheets(ws3Name).Range("A1").PasteSpecial Paste:=xlPasteValues
+                Application.DisplayAlerts = False
+                csvfile.Close False
+                Application.DisplayAlerts = True
+            Case file.Name Like "*PartnerRejection*.csv"
+                Set csvfile = Workbooks.Open(file.Path)
+                csvfile.Sheets(1).UsedRange.Copy
+                wb.Sheets(ws4Name).Range("A1").PasteSpecial Paste:=xlPasteValues
+                Application.DisplayAlerts = False
+                csvfile.Close False
+                Application.DisplayAlerts = True
+        End Select
+    End If
+Next file
+
+    For Each ws In wb.Sheets
+    Rows("2:2").Select
+    ActiveWindow.FreezePanes = True
+    ws.Columns.AutoFit
+    With ws.Range("A1").CurrentRegion
+                .HorizontalAlignment = xlLeft
+                .VerticalAlignment = xlTop
+                .WrapText = False
+                .Columns.AutoFit
+                .Font.Color = RGB(0, 0, 0)
+                .Font.Size = 11
+                .Font.Name = "Calibri"
+    End With
+    
+    ws.Range("A1").CurrentRegion.Rows(1).Font.Bold = True
+    
+Next ws
+For Each ws In wb.Sheets
+    If ws.Name = ws1Name Then
+        ws.Range("G2:I" & ws.Range("G2").End(xlDown).Row).NumberFormat = "#,##0"
+    End If
+    If ws.Name = ws2Name Then
+         
+        ws.Range("F2:F" & ws.Range("F2").End(xlDown).Row).NumberFormat = "yyyy-mm-dd"
+        ' Not IsError(ws.Range("F2:F" & ws.Range("F2").End(xlDown).Row).Value) And Not IsNull(ws.Range("F2:F" & ws.Range("F2").End(xlDown).Row).Value) Then
+            'ws.Range("F2:F" & ws.Range("F2").End(xlDown).Row).Value = Replace(ws.Range("F2:F" & ws.Range("F2").End(xlDown).Row).Text, "T00:00:00.000Z", "")
+       ' End If
+        ws.Range("G2:K" & ws.Range("G2").End(xlDown).Row).NumberFormat = "#,##0"
+        ws.Range("H2:K" & ws.Range("H2").End(xlDown).Row).NumberFormat = "0.00%"
+    End If
+    If ws.Name = ws3Name Then
+        ws.Range("H2:H" & ws.Range("H2").End(xlDown).Row).NumberFormat = "#,##0"
+        ws.Range("I2:T" & ws.Range("I2").End(xlDown).Row).NumberFormat = "0.00%"
+    End If
+    If ws.Name = ws4Name Then
+        ws.Range("G2:G" & ws.Range("G2").End(xlDown).Row).NumberFormat = "#,##0"
+    End If
+    
+Next ws
+    
+ Application.DisplayAlerts = False
+            Sheets("Sheet1").Delete
+            Application.DisplayAlerts = True
+
+wb.SaveAs folder & "Daily Partner Performance" & Format(dt, "yyyymmdd") & ".xlsx", FileFormat:=xlOpenXMLWorkbook
+
+wb.Close
+
+End Sub

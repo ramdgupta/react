@@ -1,0 +1,14 @@
+7 - 𝐀𝐢𝐫𝐛𝐧𝐛 𝐓𝐨𝐩 𝐇𝐨𝐬𝐭𝐬
+Suppose you are a data analyst working for a travel company that offers vacation rentals similar to Airbnb. Your company wants to identify the top hosts with the highest average ratings for their listings. This information will be used to recognize exceptional hosts and potentially offer them incentives to continue providing outstanding service.
+ 
+Your task is to write an SQL query to find the top 2 hosts with the highest average ratings for their listings. However, you should only consider hosts who have at least 2 listings, as hosts with fewer listings may not be representative.
+Display output in descending order of average ratings and round the average ratings to 2 decimal places.
+ 
+🚩𝐃𝐢𝐟𝐟𝐢𝐜𝐮𝐥𝐭 𝐋𝐞𝐯𝐞𝐥 : 
+===================
+MEDIUM
+
+
+First I need to find top 2 host based on highest avg review 
+I consider only those host which have at least 2 listing
+Display average rating descending order to 2 decimal places

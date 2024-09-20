@@ -1,0 +1,88 @@
+You are provided with a table named Products containing information about various products, including their names and prices. Write a SQL query to count number of products in each category based on its price into three categories below. Display the output in descending order of no of products.
+ 
+1- "Low Price" for products with a price less than 100
+2- "Medium Price" for products with a price between 100 and 500 (inclusive)
+3- "High Price" for products with a price greater than 500.
+Tables: Products
+
+product_id	product_name	price
+1	Product_A	50
+2	Product_B	150
+3	Product_C	550
+4	Product_D	300
+5	Product_E	75
+6	Product_F	620
+7	Product_G	420
+8	Product_H	230
+9	Product_I	90
+10	Product_J	510
+
+First we need to Breaking down this SQL problem step-by-step will help you understand how to approach it logically, especially if you're new to SQL. Here’s how you can break it down
+
+## Understanding the data
+You are working with a table called Products,which contains at least these columns
+
+- product_id (Unique identifier for each product)
+- product_name (Name of the product)
+- price(Price of the product)
+## Defining the Problem
+The task is to categorize the products into three price ranges
+	- ** Low Price: ** Product with a price below 100
+	- ** Medium Price: ** Products with a price between 100 and 500
+	- ** High Price: ** Products with a price above 500
+You also need to count number of products in each category and sort the results by the number of products in descending order
+
+## Use a CASE Statement
+The CASE statement is used in SQL to define conditions and return a specific result based on the conditions
+
+You need to 
+
+- Group products based on their price
+- Create three categories using the Case statement
+	- if price < 100, label it as 'Low Price'
+	- if price >=100 AND price < 500, label it as 'Medium Price'
+	- if price >= 500, label it as 'Hight Price'
+
+##  Write the SQL query
+	- ** Select the required column: ** You need to select the product price and apply a CASE statement to categorize them
+	- ** Count the number of products in each csategory :** Use the COUNT() function to count the products in each csategory
+	- ** Group by the Category : ** Use GROUP BY to get the count of products in each category
+	- Order by the number of products in descending order: Use ORDER BY to sort the result
+
+## Use a common Table Expression (CTE)
+The query uses a CTE(Common Table Expression) to create a temporary result that simplifies the main query. You don't have to use a CTE, but it makes the query more readable. 
+
+SQL Code WalkThorought
+
+-- Step 1 : Create a CTE to categorize product by price range
+WITH CTE AS (
+	SELECT product_id, product_name, product-price,
+	CASE
+		WHEN price < 100 THEN 'Low Price'  -- Low price range
+		WHEN price >=100 AND price<=500 THEN 'Medium Price' -- Midium price range
+		ELSE 'Hight Price' 	-- High price range 
+		END AS category
+	FROM Products
+)
+
+-- Step 2 :count the number of product in each category and order by the count
+	SELECT category, COUNT(*) as count
+	FROM cte
+	GROUP BY category
+	ORDER BY count DESC;
+
+-- Step by step Explanation of the Query
+	-- WITH cte AS... This creates a temporary result (CTE) called cte, which categorizes each product based on its price.
+	--The CASE statement assigns each product to 'Low Price' , 'Medium Price', or 'Hight price', based on the price
+-- SELECT...FROM cte in the main query you select the category and count the products in each category using COUNT(*)
+GROUP BY Category : This groups the results by the cateogy so you can count how many products are in each price range 
+ORDER BY no_of_products DESC : FInaly this sorts the results in descending order by the count of products
+
+Group Products by their price
+Categorize the products into low, Medium, or Hight Price using CASE
+Count the products in each category
+Order the results by the number of products in descending order
+
+
+
+  
