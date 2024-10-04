@@ -1,0 +1,54 @@
+const accountId =144533;
+let accountEmail = "ram@gmail.com";
+var accountPassword = "12345";
+accountCity = "Jaipur"
+
+Javscript me kuch const keyword hote hain javascript and text file men different yahi hai
+
+const ka matalab ye hai ki ab ese change nahi kiya ja sakta hai
+
+ab hum sabko change karke dekhte hain 
+accountID =2
+console.log(accountID); // ab mujhe accountID variable ko print karna hai
+
+jab hum run karenge to error so hoga ki 
+constant value not reassign again 
+
+abb hum es line ko comment kar denge 
+
+//accountID =2
+
+abb code sahi run hoga 
+
+ab ye sahi print hoga
+
+ab hum sare variable ko reassign karenge 
+
+accountEmail ="Ajay@gmial.com";
+accountPassword ="22222";
+accountCity ="Bhopal";
+console.log(accountID, accountEmail,accountPassword, accountCity);
+console.log ke sath human keval value milegi par ab hum ese tabular formate men print karenge jsase variable and value ki ek table print ho
+console.table([accountId, accountEmail, accountPassword, accountCity]);
+
+you get data tabular form 
+
+const hum samjhte hai ki ye constant value hai phir let aur var ko hum kyon use karte kyon nahi var ya let hi use karte hain
+ aur accountCity ko to humne na hi let diya hai na hi var declear kiya wo kaise work kar ta hai
+
+prefer not to use var
+
+ek variable aur declare kiy 
+let accountState; only declare not initialize 
+then console.log(accountState)// undefined
+
+
+
+
+
+
+
+
+
+
+
