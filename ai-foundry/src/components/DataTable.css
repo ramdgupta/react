@@ -1,0 +1,80 @@
+.ag-theme-material .ag-header {
+  --ag-header-height: 30px;
+  --ag-header-width: 150px;
+  --ag-header-background-color: #6f4dff;
+  --ag-header-foreground-color: #fff;
+  --ag-header-cell-hover-background-color: #7da5fd;
+}
+.ag-theme-quartz {
+  --ag-background-color: #ddd;
+  --ag-selected-row-background-color: rgb(0, 255, 0, 0.1);
+}
+.ag-theme-quartz .ag-header {
+  /* Changes the color of the grid text */
+  --ag-foreground-color: rgb(14, 68, 145);
+  /* Changes the color of the grid background */
+  --ag-background-color: rgb(241, 247, 255);
+  /* Changes the header color of the top row */
+  --ag-header-background-color: rgb(228, 237, 250);
+  /* Changes the hover color of the row*/
+  --ag-row-hover-color: rgb(216, 226, 255);
+
+  --ag-header-height: 30px;
+  --ag-header-width: 150px;
+  --ag-header-background-color: #6f4dff;
+  --ag-header-foreground-color: #fff;
+  --ag-header-cell-hover-background-color: #7da5fd;
+}
+.ag-theme-quartz .ag-header-group-cell {
+  font-weight: normal;
+  font-size: 22px;
+  border: 0.5px solid #a49aff;
+}
+.ag-theme-material .ag-header-cell {
+  font-size: 13px;
+  border: 0.5px solid #a49aff;
+}
+.ag-theme-material .ag-cell {
+  font-size: 12px;
+  width: auto;
+  text-align: left;
+}
+.ag-theme-quartz .ag-cell {
+  width: 100px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 0.5px solid #bcbbc4;
+
+  border-bottom: none;
+}
+.ag-theme-quartz .ag-cell {
+  background: #f2f2f2 0% 0% no-repeat padding-box;
+}
+.ag-center-cols-viewport {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.ag-theme-quartz .ag-paging-panel {
+  justify-content: center;
+}
+.ag-body-horizontal-scroll {
+  min-height: 18px !important;
+  height: 10px;
+  max-height: 18px !important;
+}
+
+.ag-body-horizontal-scroll-viewport {
+  min-height: 16px !important;
+  max-height: 16px;
+}
+/* .ag-body-horizontal-scroll-viewport :hover{
+    background-color: #4F46E5 !important;
+} */
+::-webkit-scrollbar-thumb:hover {
+  background: #4f46e5 !important;
+}
+
+ .grid-option .text-left .svg-inline {
+  cursor: pointer;
+  margin-right: 10px;
+}

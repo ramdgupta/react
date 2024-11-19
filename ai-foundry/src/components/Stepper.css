@@ -1,0 +1,110 @@
+/* .stepper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .step {
+    width: 40px;
+    height: 40px;
+    background-color: lightgray;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .step.active {
+    background-color: #007bff;
+    color: white;
+  }
+   */
+.stepper-container {
+  display: block;
+  padding: 12px;
+  background: linear-gradient(90deg, #90b6ff, #bba7ff);
+  border-radius: 10px;
+}
+.stepper {
+  justify-content: center;
+  display: flex;
+  margin-bottom: 20px;
+}
+.step-title {
+  text-align: center;
+  padding: 8px;
+}
+.step-title p {
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 0.19px;
+  color: #292929;
+  text-transform: uppercase;
+}
+
+.step {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: lightgray;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4px;
+}
+
+.step.active {
+  background-color: #007bff;
+  color: white;
+}
+.step.completed {
+  color: #292929;
+  background: #62d11e;
+}
+.step.pending {
+  background: #ffc11a;
+  color: #292929;
+  border: 0.5px solid #ffffff;
+}
+@media (max-width: 420px) {
+  .stepper-container {
+    margin: 8px;
+  }
+}
+
+/*Steper css by RAM-11/19/2024*/
+.step-nav {
+  --bs-nav-link-padding-x: 1rem;
+  --bs-nav-link-padding-y: 0.5rem;
+  --bs-nav-link-font-weight: ;
+  --bs-nav-link-color: var(--bs-link-color);
+  --bs-nav-link-hover-color: var(--bs-link-hover-color);
+  --bs-nav-link-disabled-color: var(--bs-secondary-color);
+  display: flex
+;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.step-nav-item {
+  margin: 8px;
+  text-align: left;
+  background: #efefef;
+  border-radius: 4px;
+  color: #432cff;
+  font-weight: bold;
+  font-size: 14px;
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  border: 0;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+}
+.step-nav-item.active{
+  background: #432cff;
+  color: #efefef;
+}

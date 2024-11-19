@@ -1,0 +1,35 @@
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --base-font-size: 16px;
+  --spacing-unit: 1rem;
+  --input-background: transparent
+    linear-gradient(85deg, #fbf4ff 0%, #e5f0ff 100%) 0% 0% no-repeat padding-box;
+}
+
+.business-template-form {
+    background: #F8F8FA;
+    opacity: 1;
+}
+.business-template-form .btn-container {
+  position: relative;
+  text-align: right;
+  padding:12px;
+}
+.btn-cancel {
+  background: #efefef;
+  margin-right: 12px;
+  color: #432cff;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+.btn-save {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.business-template-form .form-control {
+  background: var(--input-background);
+  color: #999;
+  font-size: 12px;
+  padding: 10px;
+}

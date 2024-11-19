@@ -1,0 +1,35 @@
+.card {
+  background: linear-gradient(90deg, #b4d7ff, #ecd9ff);
+  box-shadow: 0px 1px 6px #0000001a;
+  border-radius: 6px;
+  text-align: left;
+  font-size: 13px;
+  letter-spacing: 0px;
+  color: #333333;
+}
+
+.card-header .user-details h6 {
+  display: inline-block;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 0;
+}
+.card-header .user-details span {
+  float: right;
+  position: relative;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  justify-content: center;
+  color: #505050;
+}
+.card-header .user-details span svg {
+}
+
+.card-footer p {
+  margin-bottom: 4px;
+  text-align: right;
+  margin-right: 4px;
+  color: #7b7b7b;
+}

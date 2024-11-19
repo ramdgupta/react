@@ -1,0 +1,57 @@
+[
+    {
+        "mainVersion": "1.0",
+        "subVersions": [
+            {
+                "version": "1.1",
+                "description": "Initial release with core features.",
+                "newfeature": "Initial release with core features."
+            },
+            {
+                "version": "1.2",
+                " description": "Added user authentication.",
+                " newfeature": "Added user authentication."
+            },
+            {
+                "version": "1.3",
+                "description": "Improved UI and performance optimizations.",
+                "newfeature": "Improved UI and performance optimizations."
+            }
+        ]
+    },
+    {
+        "mainVersion": "2.0",
+        "subVersions": [
+            {
+                "version": "2.1",
+                "description": "New dashboard layout.",
+                "newfeature": "New dashboard layout."
+            },
+            {
+                "version": "2.2",
+                "description": "Integrated with third-party services.",
+                "newfeature": "Integrated with third-party services."
+            },
+            {
+                "version": "2.3",
+                "description": "Bug fixes and minor updates.",
+                "newfeature": "Bug fixes and minor updates."
+            }
+        ]
+    },
+    {
+        "mainVersion": "3.0",
+        "subVersions": [
+            {
+                "version": "3.1",
+                "description": "Introduced dark mode.",
+                "newfeature": "Introduced dark mode."
+            },
+            {
+                "version": "3.2",
+                "description": "Enhanced security features.",
+                "newfeature": "Enhanced security features."
+            }
+        ]
+    }
+]

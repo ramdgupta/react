@@ -1,0 +1,44 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+html{
+  height: 90vh;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #f7f7f7;
+}
+.container-fluid{
+  padding: 0;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  background: transparent linear-gradient(90deg, #3E4DFF 0%, #6724FF 100%);
+  border-bottom: 1px solid #d3d3d3;
+  height: 48px;
+}
+main {
+  flex: 1;
+  min-height: 80vh;
+  background-color: #F8F8FA;
+  opacity: 1;
+}
+@media (max-width: 420px) {
+  main{
+    height: 120vh;
+    overflow:auto;
+  }
+
+}
+

@@ -1,0 +1,51 @@
+.new-experiment-container {
+    text-align: center;
+    padding: 10px;
+    padding-bottom: 0;
+    font-family: Arial, sans-serif;
+     color: #677283;;
+  }
+  
+  .steps {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+  
+  .step {
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: #e0e0e0;
+    color: #555;
+    border-radius: 5px;
+    cursor: not-allowed;
+    font-size: 12px;
+  }
+  
+  .step.active {
+    background-color: #354B6A;
+    color: #fff;
+  }
+  
+  .dropdown-container {
+    margin: 20px auto;
+    width: 300px;
+    text-align: left;
+    font-size: 11px;
+  }
+  
+  .dropdown-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #677283;
+    font-size: 12px;
+    margin-left: 6px;
+  }
+  
+  .message {
+    margin-top: 20px;
+    color: #677283;
+    text-align: center;
+  }
+  

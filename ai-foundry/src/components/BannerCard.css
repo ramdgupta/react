@@ -1,0 +1,38 @@
+.card {
+  background: transparent;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+.card-img {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.card-title {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: bold;
+  position: absolute;
+  z-index: 99;
+  top: 36%;
+  left: 40%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card-link {
+  position: absolute;
+  bottom: 4%;
+  left: 4%;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+.card-link:hover{
+  color: blue;
+}

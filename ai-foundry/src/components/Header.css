@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 58px;
+  background: transparent linear-gradient(90deg, #3e4dff 0%, #6724ff 100%);
+}
+
+.app-logo {
+  width: 50px;
+  margin-left: 24px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+}
+.user-name {
+  color: #fff;
+}
+.user-role {
+  color: #fff;
+  display: block;
+  font-weight: normal;
+  font-size: 10px;
+}
+.header-right span {
+  margin-right: 10px;
+  font-weight: bold;
+}
+@media (max-width: 420px) {
+}
+
+.avatar {
+  width: 56px;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+a {
+  color: #ffffff;
+  font-size: 14px;
+  padding: 8px;
+  margin: 8px;
+  text-align: left;
+  font-weight: 100;
+  text-decoration: none;
+ 
+}
+a.active {
+  color: #ffffff;
+  font-weight: bold;
+  border-bottom: 2px solid #ffffff;
+}
+.header-left a.active{
+  border: none;
+
+}

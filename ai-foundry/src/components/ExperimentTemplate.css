@@ -1,0 +1,26 @@
+.experiment-template {
+  background: transparent
+    radial-gradient(closest-side at 24% 59%, #dee1ff 0%, #e0e4ff 100%) 0% 0%
+    no-repeat padding-box;
+  text-align: left;
+ padding: 24px;
+}
+.experiment-template .template-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+.experiment-template p {
+  font-size: 22px;
+}
+@media(max-width:420px){
+    .experiment-template {
+        display: block;
+        width: 100%;
+    }
+    .experiment-template .template-title {
+        font-size: 24px;
+        font-weight: bold;
+      }
+      
+
+}

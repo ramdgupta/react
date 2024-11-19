@@ -1,0 +1,33 @@
+.experiment-card {
+  background: transparent
+    radial-gradient(
+      closest-corner at 67% 0%,
+      #d3f1ff 0%,
+      #d3edff 0%,
+      #d0d0ff 100%
+    );
+  border-radius: 16px;
+  opacity: 1;
+  padding: 16px;
+  color: #463eff;
+  margin: 8px;
+}
+.experiment-card .title ,.exptemp-background .title {
+  font-size: 24px;
+  font-weight: bold;
+}
+.experiment-card p.template-count {
+  font-size: 32px;
+}
+.exptemp-background {
+  background: transparent
+    radial-gradient(
+      farthest-side at 70% 28%,
+      #4ec7ff 0%,
+      #bb77ff 0%,
+      #623cff 100%
+    );
+}
+.experiment-card:hover {
+  transform: scale(1.05);
+}

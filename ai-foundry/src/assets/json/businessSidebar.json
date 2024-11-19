@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Search Business Template",
+        "link": "/business/template/search"
+    },
+    {
+        "name": "Create Business Template",
+        "link": "/business/template/create"
+    },
+    {
+        "name": "Update Business Template",
+        "link": "/business/template/update"
+    }
+]

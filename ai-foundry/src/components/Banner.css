@@ -1,0 +1,39 @@
+.banner {
+  background-image: url("../assets//images/banner.png");
+  background-color: #2a004b;
+  color: white;
+  padding: 24px;
+  text-align: center;
+}
+h1 {
+  text-align: left;
+  font-weight: 100;
+}
+.banner h1 span {
+  color: #7a36ff;
+  font-weight: bold;
+}
+
+.banner .row {
+  --bs-gutter-x: 1rem;
+  --bs-gutter-y: 0;
+  padding: calc(var(--bs-gutter-x) * 0.2);
+  margin-top: var(--bs-gutter-y);
+ 
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-direction: row;
+  position: relative;
+}
+@media (max-width: 420px) {
+  .cards {
+    flex-direction: column;
+  }
+}
+.banner .card{
+  background: transparent;
+}
